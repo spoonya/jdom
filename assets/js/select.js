@@ -21,8 +21,6 @@ export function controlSelect() {
       selected.textContent = option.querySelector("label").innerText;
       optionsContainer.classList.remove("active");
       isSelected = true;
-
-      console.log(option.querySelector("input"));
     });
 
     selected.addEventListener("click", () => {

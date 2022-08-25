@@ -17,7 +17,14 @@
   }
 
   &--wide {
-    flex: 1 0 45%;
+    flex: 1 0 42.5%;
+  }
+
+  .control-labeled {
+    &:not(.form__control--wide) {
+      max-width: 135px;
+      min-width: 135px;
+    }
   }
 }
 

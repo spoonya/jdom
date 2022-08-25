@@ -1,0 +1,63 @@
+.select {
+  position: relative;
+}
+
+.select__container {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 202px;
+  max-height: 250px;
+  width: 100%;
+  padding: 20px;
+  background: var(--white-alpha);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  order: 1;
+  transition: opacity 0.1s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    overflow-y: auto;
+    pointer-events: all;
+  }
+}
+
+.select__option {
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 18px;
+    color: var(--black-alpha);
+    transition: color 0.1s linear;
+  }
+
+  &:hover {
+    span {
+      color: var(--black-beta);
+    }
+  }
+}
+
+.select__selected {
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

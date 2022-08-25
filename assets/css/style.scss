@@ -1,5 +1,4 @@
 @import "./utils/vars";
-@import "./mixins/media";
 
 @import "./common/global";
 @import "./common/header";
@@ -10,6 +9,7 @@
 @import "./common/buttons/button-outline";
 @import "./common/buttons/button";
 @import "./common/form/input";
+@import "./common/form/select";
 @import "./common/form/checkbox";
 @import "./common/form/form";
 @import "./common/form/control-labeled";

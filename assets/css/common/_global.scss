@@ -63,10 +63,6 @@ html {
   --white-alpha: #fff;
   --yellow-alpha: #fbc75a;
   --red-alpha: #ff3131;
-
-  @include media-laptop {
-    font-size: 55%;
-  }
 }
 
 body {

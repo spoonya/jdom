@@ -165,7 +165,7 @@
       </div>
     </div>
   </div>
-  <div id="modal-section-add" class="modal">
+  <div id="modal-section-add" class="modal active">
     <div class="modal__inner">
       <div class="modal__top">
         <h2 class="modal__title">Создание нового пункта</h2>
@@ -183,34 +183,37 @@
                 <span class="control-labeled__label">тариф / $</span>
                 <input class="input" type="text" placeholder="3">
               </label>
-              <div class="select" data-select>
-                <div class="select__container" data-select-container>
-                  <div class="select__option" data-select-option>
-                    <label>
-                      <span class="control-labeled__label">Метры погонные</span>
-                      <input class="input" type="radio" name="measure[]" value="0">
-                    </label>
+              <div class="control-labeled">
+                <span class="control-labeled__label">измерение</span>
+                <div class="select" data-select>
+                  <div class="select__container" data-select-container>
+                    <div class="select__option" data-select-option>
+                      <label>
+                        <span>Метры погонные</span>
+                        <input class="input" type="radio" name="measure[]" value="0">
+                      </label>
+                    </div>
+                    <div class="select__option" data-select-option>
+                      <label>
+                        <span>Штука / единица</span>
+                        <input class="input" type="radio" name="measure[]" value="1">
+                      </label>
+                    </div>
+                    <div class="select__option" data-select-option>
+                      <label>
+                        <span>Литр</span>
+                        <input class="input" type="radio" name="measure[]" value="2">
+                      </label>
+                    </div>
+                    <div class="select__option" data-select-option>
+                      <label>
+                        <span>Метры кубические</span>
+                        <input class="input" type="radio" name="measure[]" value="3">
+                      </label>
+                    </div>
                   </div>
-                  <div class="select__option" data-select-option>
-                    <label>
-                      <span class="control-labeled__label">Штука / единица</span>
-                      <input class="input" type="radio" name="measure[]" value="1">
-                    </label>
-                  </div>
-                  <div class="select__option" data-select-option>
-                    <label>
-                      <span class="control-labeled__label">Литр</span>
-                      <input class="input" type="radio" name="measure[]" value="2">
-                    </label>
-                  </div>
-                  <div class="select__option" data-select-option>
-                    <label>
-                      <span class="control-labeled__label">Метры кубические</span>
-                      <input class="input" type="radio" name="measure[]" value="3">
-                    </label>
-                  </div>
+                  <div class="select__selected input" data-select-selected>Единица измерения</div>
                 </div>
-                <div class="select__selected input" data-select-selected>Единица измерения</div>
               </div>
               <label class="control-labeled form__control--wide">
                 <span class="control-labeled__label">тариф для сложных задач / $</span>

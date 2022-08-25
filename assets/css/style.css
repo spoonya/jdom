@@ -57,11 +57,6 @@ html {
   --yellow-alpha: #fbc75a;
   --red-alpha: #ff3131;
 }
-@media only screen and (max-width: 1199.98px) {
-  html {
-    font-size: 55%;
-  }
-}
 
 body {
   font-family: "Lato", sans-serif;
@@ -207,6 +202,62 @@ body {
   font-size: 16px;
 }
 
+.select {
+  position: relative;
+}
+
+.select__container {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 202px;
+  max-height: 250px;
+  width: 100%;
+  padding: 20px;
+  background: var(--white-alpha);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  order: 1;
+  transition: opacity 0.1s ease-in-out;
+}
+.select__container.active {
+  opacity: 1;
+  overflow-y: auto;
+  pointer-events: all;
+}
+
+.select__option {
+  cursor: pointer;
+}
+.select__option:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.select__option input {
+  display: none;
+}
+.select__option label {
+  cursor: pointer;
+}
+.select__option span {
+  font-size: 18px;
+  color: var(--black-alpha);
+  transition: color 0.1s linear;
+}
+.select__option:hover span {
+  color: var(--black-beta);
+}
+
+.select__selected {
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .checkbox {
   display: flex;
   align-items: center;
@@ -267,7 +318,11 @@ body {
   margin-bottom: 4rem;
 }
 .form__control--wide {
-  flex: 1 0 45%;
+  flex: 1 0 42.5%;
+}
+.form__control .control-labeled:not(.form__control--wide) {
+  max-width: 135px;
+  min-width: 135px;
 }
 
 .form__inputs-group {
@@ -278,8 +333,10 @@ body {
 .control-labeled {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .control-labeled__label {
+  display: block;
   padding-left: 12px;
   font-size: 16px;
   color: var(--black-beta);
@@ -455,7 +512,8 @@ body {
   font-size: 16px;
 }
 .tariff__section-add::before {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   content: url("../img/svg/plus-circle-light.svg");
   height: 48px;
   width: 48px;
