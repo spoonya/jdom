@@ -13,6 +13,5 @@ export const CLASSES = {
 
 export const DOM = {
   body: document.querySelector("body"),
-  overlay: document.querySelector("#overlay"),
   header: document.querySelector("#header"),
 };

@@ -197,7 +197,7 @@ body {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 6px;
-  background: var(--white-alpha);
+  background: transparent;
   padding: 13px 12px;
   font-size: 16px;
 }
@@ -302,6 +302,7 @@ body {
 }
 .checkbox__input:checked + .checkbox__styled {
   border-color: transparent;
+  background-color: transparent;
 }
 
 .form__inputs {
@@ -504,6 +505,7 @@ body {
 .tariff__section-title {
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 .tariff__section-add {
   display: flex;
@@ -517,6 +519,14 @@ body {
   content: url("../img/svg/plus-circle-light.svg");
   height: 48px;
   width: 48px;
+}
+.tariff__section-inputs {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--white-alpha);
+  border-radius: 2px;
 }
 
 .tariff__buttons {

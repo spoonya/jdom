@@ -60,7 +60,7 @@
       <div class="content">
         <div class="container">
           <div class="content__inner">
-            <form class="tariff">
+            <form class="tariff form">
               <div class="tariff__content">
                 <ul class="tariff__list list-reset">
                   <li class="tariff__item">
@@ -74,6 +74,55 @@
                         <ul class="tariff__section list-reset">
                           <li class="tariff__section-item">
                             <h4 class="tariff__section-title">Монтаж стен из Газосиликатных блоков</h4>
+                            <div class="tariff__section-inputs">
+                              <div class="form__inputs-group form__control">
+                                <label class="control-labeled">
+                                  <span class="control-labeled__label">тариф / $</span>
+                                  <input class="input" type="text" placeholder="3">
+                                </label>
+                                <div class="control-labeled">
+                                  <span class="control-labeled__label">измерение</span>
+                                  <div class="select" data-select>
+                                    <div class="select__container" data-select-container>
+                                      <div class="select__option" data-select-option>
+                                        <label>
+                                          <span>Метры погонные</span>
+                                          <input class="input" type="radio" name="measure[]" value="0">
+                                        </label>
+                                      </div>
+                                      <div class="select__option" data-select-option>
+                                        <label>
+                                          <span>Штука / единица</span>
+                                          <input class="input" type="radio" name="measure[]" value="1">
+                                        </label>
+                                      </div>
+                                      <div class="select__option" data-select-option>
+                                        <label>
+                                          <span>Литр</span>
+                                          <input class="input" type="radio" name="measure[]" value="2">
+                                        </label>
+                                      </div>
+                                      <div class="select__option" data-select-option>
+                                        <label>
+                                          <span>Метры кубические</span>
+                                          <input class="input" type="radio" name="measure[]" value="3">
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="select__selected input" data-select-selected>Единица измерения</div>
+                                  </div>
+                                </div>
+                                <label class="control-labeled form__control--wide">
+                                  <span class="control-labeled__label">тариф для сложных задач / $</span>
+                                  <input class="input" type="text" placeholder="3">
+                                </label>
+                              </div>
+                            </div>
+                            <label class="checkbox">
+                              <input class="checkbox__input" checked hidden type="checkbox">
+                              <span class="checkbox__styled"></span>
+                              <span class="checkbox__label">Материал может быть предоставлен заказчиком</span>
+                            </label>
                           </li>
                         </ul>
                         <button class="tariff__section-add" type="button" data-modal-target="modal-section-add">
@@ -104,6 +153,7 @@
         </div>
       </div>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -165,7 +215,7 @@
       </div>
     </div>
   </div>
-  <div id="modal-section-add" class="modal active">
+  <div id="modal-section-add" class="modal">
     <div class="modal__inner">
       <div class="modal__top">
         <h2 class="modal__title">Создание нового пункта</h2>

@@ -36,10 +36,6 @@ export function controlSelect() {
       if (optionsContainer.classList.contains(CLASSES.active)) {
         optionsContainer.classList.remove(CLASSES.active);
       }
-
-      if (isSelected) {
-        selected.classList.add(CLASSES.active);
-      }
     });
   });
 }
