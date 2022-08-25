@@ -1,0 +1,14 @@
+.button-add {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 20px;
+  font-weight: 800;
+
+  &::before {
+    display: inline-block;
+    content: url("../img/svg/plus-circle.svg");
+    height: 48px;
+    width: 48px;
+  }
+}

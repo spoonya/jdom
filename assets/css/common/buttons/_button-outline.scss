@@ -1,0 +1,30 @@
+.button-outline {
+  border: 1px solid var(--black-alpha);
+  border-radius: 32px;
+  font-size: 16px;
+  padding: 15px 50px;
+  background-color: var(--white-alpha);
+
+  transition: background-color 0.1s linear, color 0.1s linear;
+
+  &:hover {
+    background-color: var(--black-alpha);
+    color: var(--white-alpha);
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &--delete {
+    border-color: var(--red-alpha);
+    color: var(--red-alpha);
+
+    &:hover {
+      background-color: var(--red-alpha);
+      color: var(--white-alpha);
+    }
+  }
+}

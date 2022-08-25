@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>JDOM</title>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__top">
+            <div class="logo">
+              <a href="index.html">
+                <img src="assets/img/svg/logo.svg" width="130" height="79" alt="JDOM">
+              </a>
+            </div>
+            <nav class="header__menu">
+              <ul class="header__menu-list list-reset">
+                <li>
+                  <a href="#">
+                    <img src="assets/img/svg/plus.svg" width="24" height="24" alt="">
+                    Создать новый
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/img/svg/union.svg" width="24" height="24" alt="">Все проекты
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/img/svg/tarif.svg" width="24" height="24" alt="">
+                    Тарифы
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button class="burger-button" aria-label="открыть меню"></button>
+          </div>
+          <div class="header__bot">
+            <h1 class="title">Тарифы</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="content">
+        <div class="container">
+          <div class="content__inner">
+            <form class="tariff">
+              <div class="tariff__content">
+                <ul class="tariff__list list-reset">
+                  <li class="tariff__item">
+                    <h2 class="tariff__item-title">Электротехнические работы</h2>
+                    <ul class="tariff__group list-reset">
+                      <li class="tariff__group-item">
+                        <div class="tariff__group-item-top">
+                          <h3 class="tariff__group-item-title">Работа потолка с ГК Конструкцией</h3>
+                          <button class="tariff__group-item-close" type="button"></button>
+                        </div>
+                        <ul class="tariff__section list-reset">
+                          <li class="tariff__section-item">
+                            <h4 class="tariff__section-title">Монтаж стен из Газосиликатных блоков</h4>
+                          </li>
+                        </ul>
+                        <button class="tariff__section-add" type="button" data-modal-target="modal-section-add">
+                          Добавить пункт
+                        </button>
+                      </li>
+                    </ul>
+                    <button class="button-outline tariff__group-add" data-modal-target="modal-group-add" type="button">
+                      <span>Добавить группу</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="tariff__add">
+                  <button class="button-add" data-modal-target="modal-unit-add" type="button">
+                    Добавить раздел
+                  </button>
+                </div>
+              </div>
+              <div class="tariff__buttons">
+                <div class="tariff__buttons-group">
+                  <button class="button-outline button-outline--delete" type="button">Выбрать и удалить</button>
+                  <button class="button-outline" type="button">Отменить</button>
+                </div>
+                <button class="button">Сохранить изменения</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__madeby">
+            <a href="#">
+              <img src="assets/img/svg/pras.svg" width="80" height="19" alt="" loading="lazy">
+            </a>
+            <span>Проект компании PRAS</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="modal-unit-add" class="modal">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <h2 class="modal__title">Создание нового раздела</h2>
+        <button class="modal__close" data-modal-close aria-label="закрыть" type="button"></button>
+      </div>
+      <div class="modal__content">
+        <form class="form">
+          <div class="form__inputs">
+            <label class="control-labeled">
+              <span class="control-labeled__label">название раздела</span>
+              <input class="input" type="text" placeholder="Например: Электротехнические работы">
+            </label>
+          </div>
+          <div class="form__buttons">
+            <button class="button-outline" type="button" data-modal-close>
+              <span>Отменить</span>
+            </button>
+            <button class="button" type="submit">
+              <span>Сохранить</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="modal-group-add" class="modal">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <h2 class="modal__title">Создание новой группы</h2>
+        <button class="modal__close" data-modal-close aria-label="закрыть" type="button"></button>
+      </div>
+      <div class="modal__content">
+        <form class="form">
+          <div class="form__inputs">
+            <label class="control-labeled">
+              <span class="control-labeled__label">название группы</span>
+              <input class="input" type="text" placeholder="Например: Работы по стяжке">
+            </label>
+          </div>
+          <div class="form__buttons">
+            <button class="button-outline" type="button" data-modal-close>Отменить</button>
+            <button class="button" type="submit">Сохранить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="modal-section-add" class="modal active">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <h2 class="modal__title">Создание нового пункта</h2>
+        <button class="modal__close" data-modal-close aria-label="закрыть" type="button"></button>
+      </div>
+      <div class="modal__content">
+        <form class="form">
+          <div class="form__inputs">
+            <label class="control-labeled form__control">
+              <span class="control-labeled__label">название группы</span>
+              <input class="input" type="text" placeholder="Например: Работы по стяжке">
+            </label>
+            <div class="form__inputs-group form__control">
+              <label class="control-labeled">
+                <span class="control-labeled__label">тариф / $</span>
+                <input class="input" type="text" placeholder="3">
+              </label>
+              <label class="control-labeled">
+                <span class="control-labeled__label">измерение</span>
+                <input class="input" type="text">
+              </label>
+              <label class="control-labeled form__control--wide">
+                <span class="control-labeled__label">тариф для сложных задач / $</span>
+                <input class="input" type="text" placeholder="3">
+              </label>
+            </div>
+            <div class="modal__checkbox">
+              <label class="checkbox">
+                <input class="checkbox__input" hidden type="checkbox">
+                <span class="checkbox__styled"></span>
+                <span class="checkbox__label">Материал может быть предоставлен заказчиком</span>
+              </label>
+            </div>
+          </div>
+          <div class="form__buttons">
+            <button class="button-outline" type="button" data-modal-close>Отменить</button>
+            <button class="button" type="submit">Сохранить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="assets/js/main.js" type="module"></script>
+
+</html>

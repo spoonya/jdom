@@ -1,0 +1,20 @@
+.footer {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    #ffffff;
+}
+
+.footer__inner {
+  padding: 3.9rem;
+}
+
+.footer__madeby {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  span {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+  }
+}

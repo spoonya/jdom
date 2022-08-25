@@ -1,0 +1,31 @@
+.header {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 3.5rem 0;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 9.8rem;
+}
+
+.header__menu-list {
+  display: flex;
+  gap: 8rem;
+
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      font-weight: 700;
+      color: var(--black-alpha);
+    }
+
+    img {
+      max-width: 24px;
+    }
+  }
+}

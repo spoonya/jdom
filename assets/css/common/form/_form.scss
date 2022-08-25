@@ -1,0 +1,27 @@
+.form {
+}
+
+.form__inputs {
+  margin-bottom: 4rem;
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.form__control {
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  &--wide {
+    flex: 1 0 45%;
+  }
+}
+
+.form__inputs-group {
+  display: flex;
+  gap: 20px;
+}
